@@ -27,7 +27,7 @@ int stopwatch(int mode) {
 	}
 	return 0;
 }
-bool isPrimeList(unsigned long int x) {
+/*bool isPrimeList(unsigned long int x) {
 	ifstream file("primelist.txt");
 	int data;
 	vector<int> primelist;
@@ -43,9 +43,9 @@ bool isPrimeList(unsigned long int x) {
 		if (a == x) return true;
 	}
 	return false;
-}
+}*/
 
-bool isPrimeFor(unsigned long int x) {
+bool isPrime(unsigned long int x) {
 	for (unsigned int i = 2; i <= x / 2; ++i)
 	{
 		if (x % i == 0)
@@ -63,12 +63,12 @@ int main()
 	cout << boolalpha;
 	cin >> primes;
 	stopwatch(1);
-	result = isPrimeFor(primes);
+	result = isPrime(primes);
 	timed = stopwatch(0);
 	cout << "'For loop' method: " << result << " Time: " << timed << " microseconds" << endl;
-	stopwatch(1);
+	/*stopwatch(1);
 	result = isPrimeList(primes);
 	timed = stopwatch(0);
-	cout << "'List' method: " << result << " Time: " << timed << " microseconds";
+	cout << "'List' method: " << result << " Time: " << timed << " microseconds";*/
 }
  
