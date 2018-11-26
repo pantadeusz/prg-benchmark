@@ -1,7 +1,5 @@
-#include <iostream>
-
-using namespace std;
-
+#include "zd.hpp"
+namespace s19376 {
 bool is_prime(unsigned long int x) {
     if(x%2==0 || x%3==0 || x==1) {
         return false;
@@ -9,10 +7,5 @@ bool is_prime(unsigned long int x) {
         return true;
     }
 }
-
-int main() {
-    unsigned long int liczba;
-    cout<<"podaj liczbe do sprawdzenia"<<endl;
-    cin>>liczba;
-    cout<<is_prime(liczba)<<endl;
 }
+
